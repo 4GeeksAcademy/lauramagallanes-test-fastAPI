@@ -1,0 +1,34 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+sqlalchemy = "*"
+databases = "*"
+alembic = "*"
+pydantic = "*"
+python-dotenv = "*"
+fastapi-cors = "*"
+fastapi-amis-admin = "*"
+sqlmodel = "*"
+pydantic-settings = "*"
+psycopg2 = "*"
+asyncpg = "*"
+aiosqlite = "*"
+passlib = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.10"
+
+[scripts]
+start = "uvicorn src.main:app --reload"
+migrate = "make migrate"
+upgrade = "make upgrade"
+init = "make init"
+reset_db = "make reset_db"
+deploy="echo 'Please follow this 3 steps to deploy: https://start.4geeksacademy.com/deploy/render' "
